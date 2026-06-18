@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Atif Ali | Academic Consulting, Referencing & Policy Research Expert</title>
-    <meta name="description" content="Professional portfolio of Muhammad Atif Ali. Specialist in M.Phil Sociology, In-charge PPDU, offering academic writing, APA/Harvard formatting, SPSS analysis, and policy briefs. Available on Fiverr and consultancies.">
+    <title>Muhammad Atif Ali | Policy Research, Analytical Reports & Academic Consultancy</title>
+    <meta name="description" content="Professional portfolio of Muhammad Atif Ali. Policy research and analytical reports specialist offering academic consultancy, APA/Harvard formatting, SPSS analysis, governance reports, and policy briefs. Available on Fiverr and consultancies.">
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhammad Atif Ali | Policy Research & Analytical Reports">
+    <meta property="og:description" content="Research-based policy reports, governance analysis, academic consultancy, APA/Harvard formatting, SPSS analysis, and executive briefs.">
+    <meta property="og:image" content="GIG.png">
+    <meta property="og:url" content="https://atif125612.github.io/mywebsite/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muhammad Atif Ali | Policy Research & Analytical Reports">
+    <meta name="twitter:description" content="Policy research, governance analysis, academic consultancy, formatting and analytical reports. Available on Fiverr.">
+    <meta name="twitter:image" content="GIG.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -57,42 +67,96 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-border-glow {
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.1);
-        }
-        .gold-border-glow:hover {
-            box-shadow: 0 0 25px rgba(197, 160, 89, 0.2);
-            border-color: rgba(197, 160, 89, 0.4);
-        }
+        .gold-border-glow { box-shadow: 0 0 15px rgba(197,160,89,0.1); }
+        .gold-border-glow:hover { box-shadow: 0 0 25px rgba(197,160,89,0.2); border-color: rgba(197,160,89,0.4); }
         .hero-pattern {
-            background-color: #F8FAFC; /* light mode slate-50 */
+            background-color: #F8FAFC;
             background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
             background-size: 30px 30px;
         }
         .dark .hero-pattern {
-            background-color: #030712; /* dark mode navy-950 */
+            background-color: #030712;
             background-image: radial-gradient(rgba(197, 160, 89, 0.04) 1px, transparent 0);
         }
         /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F8FAFC;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #CBD5E1;
-            border-radius: 4px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #1E293B;
-        }
-        ::-webkit-scrollbar-thumb:hover {
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8FAFC; }
+        .dark ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #1E293B; }
+        ::-webkit-scrollbar-thumb:hover { background: #C5A059; }
+
+        /* ── Typing cursor ── */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
             background: #C5A059;
+            margin-left: 3px;
+            border-radius: 2px;
+            animation: blink 0.75s step-end infinite;
+            vertical-align: middle;
         }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+        /* ── Scroll fade-in ── */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Skill bar fill animation ── */
+        .skill-bar-fill {
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ── Floating WhatsApp button ── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: wa-pop 0.5s 1.5s both;
+        }
+        .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+        @keyframes wa-pop {
+            0%   { opacity:0; transform:scale(0.5); }
+            80%  { transform:scale(1.08); }
+            100% { opacity:1; transform:scale(1); }
+        }
+        .whatsapp-float .wa-tooltip {
+            position: absolute;
+            right: 68px;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+            padding: 5px 10px;
+            border-radius: 6px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .whatsapp-float:hover .wa-tooltip { opacity: 1; }
+
+        /* ── Testimonial card ── */
+        .testimonial-card { transition: transform 0.3s, box-shadow 0.3s; }
+        .testimonial-card:hover { transform: translateY(-4px); }
     </style>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 dark:bg-navy-950 dark:text-slate-100 leading-relaxed overflow-x-hidden transition-colors duration-300">
@@ -171,23 +235,23 @@
             <div class="lg:col-span-7 space-y-8">
                 <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/25 text-gold-700 dark:text-gold-400 text-xs font-semibold tracking-wider uppercase">
                     <span class="w-2 h-2 rounded-full bg-gold-500 dark:bg-gold-400 animate-pulse"></span>
-                    <span>Global Freelance & Research Consultancies</span>
+                    <span>Professional | Research-Based | Impact-Focused</span>
                 </div>
                 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-slate-900 dark:text-white">
-                    High-End Academic Consulting, <br class="hidden md:block">
-                    <span class="gold-gradient-text">Formatting & Referencing</span>
+                    Policy Research & Analytical Reports <br class="hidden md:block">
+                    <span class="gold-gradient-text">Academic Consultancy, Formatting & Referencing</span>
                 </h1>
                 
                 <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-xl font-light">
-                    I translate complex data sets and socio-legal research into flawless, publication-ready dissertations, reports, and presentation slides. Specialist in APA, Harvard, OSCOLA, and SPSS analysis.
+                    Expert in <span id="typing-text" class="font-semibold text-gold-600 dark:text-gold-400"></span><span class="typing-cursor h-6"></span>
                 </p>
 
                 <!-- Credentials Strip -->
                 <div class="flex flex-wrap gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
-                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-graduation-cap text-gold-600 dark:text-gold-500 mr-1.5"></i>M.Phil Sociology</span>
-                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-calculator text-gold-600 dark:text-gold-500 mr-1.5"></i>SPSS & Thematic Analysis</span>
-                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-file-invoice text-gold-600 dark:text-gold-500 mr-1.5"></i>APA/Harvard Referencing</span>
+                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-landmark text-gold-600 dark:text-gold-500 mr-1.5"></i>Public Policy & Governance</span>
+                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-chart-line text-gold-600 dark:text-gold-500 mr-1.5"></i>Data Analysis & Evaluation</span>
+                    <span class="px-3 py-1 bg-white dark:bg-slate-800/60 rounded-full border border-slate-200 dark:border-slate-700/50 shadow-sm"><i class="fa-solid fa-file-invoice text-gold-600 dark:text-gold-500 mr-1.5"></i>Academic Formatting & Referencing</span>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-2">
@@ -225,32 +289,76 @@
     <!-- Trust Strip / Standards Grid -->
     <section class="bg-slate-100 dark:bg-navy-900 border-y border-slate-200 dark:border-slate-800/60 py-8 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-xs uppercase tracking-widest text-slate-500 font-semibold mb-6">Expert Compliance & Formatting Standards</p>
+            <p class="text-center text-xs uppercase tracking-widest text-slate-500 font-semibold mb-6">Policy, Research & Formatting Capabilities</p>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">APA Style</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">7th Edition Compliance</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Policy Research</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Evidence-Based Reports</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Harvard</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Academic Referencing</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Governance</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Systems Analysis</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Chicago</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Footnotes & Endnotes</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Security</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Strategy Briefs</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">OSCOLA</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Legal Citation Model</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Evaluation</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Data & Impact</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">SPSS</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Quantitative Analysis</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">APA/Harvard</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Formatting</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-3 bg-white dark:bg-slate-950/40 rounded-lg border border-slate-200 dark:border-slate-800/40 shadow-sm">
-                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">MS Office</span>
-                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Word, Excel, PowerPoint</span>
+                    <span class="font-serif font-bold text-gold-700 dark:text-gold-400 text-sm">Policy Briefs</span>
+                    <span class="text-[9px] text-slate-500 uppercase mt-0.5">Executive Summaries</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Gig Banner -->
+    <section id="gig-showcase" class="py-20 bg-white dark:bg-navy-950/50 border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-4 space-y-6">
+                <span class="text-xs font-bold tracking-widest text-gold-600 dark:text-gold-500 uppercase block">Featured Fiverr Gig</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">Policy Research & Analytical Reports</h2>
+                <p class="text-slate-500 dark:text-slate-400 font-light text-sm">
+                    A research-based service for public policy, governance, security, criminal justice, social systems, data evaluation, policy briefs, executive summaries, and academic formatting.
+                </p>
+                <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                    <div class="flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 px-3 py-2">
+                        <i class="fa-solid fa-magnifying-glass-chart text-gold-600 dark:text-gold-500"></i>
+                        <span>Research-Driven</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 px-3 py-2">
+                        <i class="fa-solid fa-file-circle-check text-gold-600 dark:text-gold-500"></i>
+                        <span>High Quality</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 px-3 py-2">
+                        <i class="fa-solid fa-stopwatch text-gold-600 dark:text-gold-500"></i>
+                        <span>On-Time Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 px-3 py-2">
+                        <i class="fa-solid fa-award text-gold-600 dark:text-gold-500"></i>
+                        <span>100% Original</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="https://www.fiverr.com/zukhrufatif" target="_blank" class="px-6 py-3 bg-fiverr hover:bg-fiverr-hover text-white font-bold text-center rounded-lg shadow-md transition-all duration-300">
+                        View Fiverr Gig
+                    </a>
+                    <a href="#portfolio" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-800 font-bold text-center rounded-lg transition-all duration-300">
+                        See Report Samples
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-8">
+                <figure class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 shadow-lg">
+                    <img src="GIG.png" alt="Policy research and analytical reports Fiverr gig banner for Muhammad Atif Ali" class="w-full h-auto block">
+                </figure>
             </div>
         </div>
     </section>
@@ -270,17 +378,17 @@
                     My academic foundation includes an M.Phil in Sociology from the University of the Punjab, focusing on advanced qualitative/quantitative research methodologies (SPSS, thematic coding). I apply this dual expertise in public administration and academic rigor to help clients worldwide craft perfectly structured research reports, essays, literature reviews, and presentations.
                 </p>
 
-                <div class="pt-4 border-t border-slate-200 dark:border-slate-855 grid grid-cols-3 gap-4">
+                <div class="pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-4">
                     <div>
-                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500">3.5+</span>
+                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500 counter" data-target="3.5" data-decimals="1" data-suffix="+">0</span>
                         <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Years Gov Admin</span>
                     </div>
                     <div>
-                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500">20+</span>
+                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500 counter" data-target="20" data-suffix="+">0</span>
                         <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Research Subjects</span>
                     </div>
                     <div>
-                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500">100%</span>
+                        <span class="block text-3xl font-serif font-bold text-gold-600 dark:text-gold-500 counter" data-target="100" data-suffix="%">0</span>
                         <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">APA/Harvard Spec</span>
                     </div>
                 </div>
@@ -303,8 +411,8 @@
                         <i class="fa-solid fa-folder-open text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-white mb-1">PPDU System Administration</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Supervising government database tracking systems, ensuring strict quality checks, compliance reporting, and executive briefs.</p>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">System Administration</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Supervising database tracking systems, ensuring strict quality checks, compliance reporting, and executive briefs.</p>
                     </div>
                 </div>
 
@@ -334,7 +442,7 @@
                 <!-- Service 1 -->
                 <div class="bg-white dark:bg-slate-950/60 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-gold-500/40 transition-all duration-300 flex flex-col justify-between group shadow-sm">
                     <div>
-                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-850">
+                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-800">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
                         <h3 class="text-xl font-serif font-bold text-slate-900 dark:text-white mb-4 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">1. Literature Reviews</h3>
@@ -350,7 +458,7 @@
                 <!-- Service 2 -->
                 <div class="bg-white dark:bg-slate-950/60 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-gold-500/40 transition-all duration-300 flex flex-col justify-between group shadow-sm">
                     <div>
-                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-855">
+                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-800">
                             <i class="fa-solid fa-highlighter"></i>
                         </div>
                         <h3 class="text-xl font-serif font-bold text-slate-900 dark:text-white mb-4 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">2. Citation & Formatting</h3>
@@ -366,7 +474,7 @@
                 <!-- Service 3 -->
                 <div class="bg-white dark:bg-slate-950/60 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-gold-500/40 transition-all duration-300 flex flex-col justify-between group shadow-sm">
                     <div>
-                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-850">
+                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-800">
                             <i class="fa-solid fa-chalkboard-user"></i>
                         </div>
                         <h3 class="text-xl font-serif font-bold text-slate-900 dark:text-white mb-4 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">3. Slides & Posters</h3>
@@ -382,7 +490,7 @@
                 <!-- Service 4 -->
                 <div class="bg-white dark:bg-slate-950/60 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-gold-500/40 transition-all duration-300 flex flex-col justify-between group shadow-sm">
                     <div>
-                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-850">
+                        <div class="w-12 h-12 bg-slate-100 dark:bg-slate-900 text-gold-600 dark:text-gold-500 rounded-xl flex items-center justify-center text-xl mb-6 border border-slate-200 dark:border-slate-800">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <h3 class="text-xl font-serif font-bold text-slate-900 dark:text-white mb-4 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">4. SPSS & Data Briefs</h3>
@@ -398,8 +506,49 @@
         </div>
     </section>
 
+    <!-- ══ Why Choose Me ══ -->
+    <section id="why-me" class="py-24 bg-white dark:bg-navy-950/50 border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-gold-600 dark:text-gold-500 uppercase block">Why Work With Me</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">4 Reasons Clients Choose Me</h2>
+                <p class="text-slate-500 dark:text-slate-400 font-light">Trusted by students, researchers and professionals worldwide for flawless academic outputs.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in-up text-center p-8 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition-all">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-5 shadow-md">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-slate-900 dark:text-white text-lg mb-2">Fast Delivery</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Turnaround from 24 hours to 7 days. Urgent orders welcome with prior discussion.</p>
+                </div>
+                <div class="fade-in-up text-center p-8 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition-all" style="transition-delay:0.1s">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-5 shadow-md">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-slate-900 dark:text-white text-lg mb-2">100% Accuracy</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Every citation, reference, and table checked manually against the required style guide.</p>
+                </div>
+                <div class="fade-in-up text-center p-8 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition-all" style="transition-delay:0.2s">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-5 shadow-md">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-slate-900 dark:text-white text-lg mb-2">Free Revisions</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Unlimited revisions on Standard &amp; Premium packages until you are 100% satisfied.</p>
+                </div>
+                <div class="fade-in-up text-center p-8 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-gold-500/40 transition-all" style="transition-delay:0.3s">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-5 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-slate-900 dark:text-white text-lg mb-2">100% Confidential</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-light">Your documents and personal data are never shared. Full NDA available on request.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Fiverr Pricing Packages Section -->
-    <section id="pricing" class="py-24 bg-white dark:bg-navy-950/40 border-t border-slate-200 dark:border-slate-850 transition-colors duration-300">
+    <section id="pricing" class="py-24 bg-white dark:bg-navy-950/40 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
                 <span class="text-xs font-bold tracking-widest text-gold-600 dark:text-gold-500 uppercase block">Freelance Packages</span>
@@ -414,11 +563,11 @@
                         <div class="flex justify-between items-start mb-6">
                             <div>
                                 <h3 class="text-lg font-bold text-slate-900 dark:text-white">Basic</h3>
-                                <p class="text-xs text-slate-505 dark:text-slate-400 mt-1">Formatting & References</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Formatting & References</p>
                             </div>
                             <span class="text-2xl font-serif font-bold text-gold-600 dark:text-gold-500">$25</span>
                         </div>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light mb-6">Correction of bibliography lists, conversion of citation styles (e.g. APA to Harvard), and layout clean-ups.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light mb-6">Correction of bibliography lists, conversion of citation styles (e.g. APA to Harvard), and layout clean-ups.</p>
                         <ul class="space-y-3.5 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 pt-6">
                             <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-fiverr"></i> <span>Up to 5,000 words formatting</span></li>
                             <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-fiverr"></i> <span>In-text citation crosscheck</span></li>
@@ -471,11 +620,11 @@
                         <div class="flex justify-between items-start mb-6">
                             <div>
                                 <h3 class="text-lg font-bold text-slate-900 dark:text-white">Premium</h3>
-                                <p class="text-xs text-slate-505 dark:text-slate-400 mt-1">Full Research & Slide Deck</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Full Research & Slide Deck</p>
                             </div>
                             <span class="text-2xl font-serif font-bold text-gold-600 dark:text-gold-500">$180</span>
                         </div>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light mb-6">End-to-end consulting service including detailed empirical investigation, formatting, and custom presentation slides.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light mb-6">End-to-end consulting service including detailed empirical investigation, formatting, and custom presentation slides.</p>
                         <ul class="space-y-3.5 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 pt-6">
                             <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-fiverr"></i> <span>Up to 4,000 words detailed report</span></li>
                             <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-fiverr"></i> <span>SPSS Data analysis / Thematic tables</span></li>
@@ -497,7 +646,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-24 bg-slate-50 dark:bg-navy-950 border-t border-slate-200 dark:border-slate-850 transition-colors duration-300">
+    <section id="portfolio" class="py-24 bg-slate-50 dark:bg-navy-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16">
                 <div class="space-y-4 max-w-xl">
@@ -508,10 +657,10 @@
                 <!-- Filter Tabs -->
                 <div class="mt-6 lg:mt-0 flex flex-wrap gap-2 text-xs font-medium tracking-wide">
                     <button class="portfolio-filter-btn px-4 py-2 bg-gold-600 dark:bg-gold-500 text-white dark:text-navy-950 rounded font-semibold transition" data-filter="all">All Projects</button>
-                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="policy">Policy, Law & IR</button>
-                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="business">Business & PM</button>
-                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="criminology">Criminology & Sociology</button>
-                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="formatting">Formatting & Tech</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="policy">Policy, Law & IR</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="business">Business & PM</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="criminology">Criminology & Sociology</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white rounded border border-slate-200 dark:border-slate-800 font-semibold transition" data-filter="formatting">Formatting & Tech</button>
                 </div>
             </div>
 
@@ -527,11 +676,11 @@
                             <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Bentley Motors Sustainability Report</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A corporate social responsibility and environmental sustainability analysis of Bentley Motors. The report evaluates carbon-neutral production processes at the Crewe factory, sustainable materials engineering (e.g., vege-leather options), waste-to-resource initiatives, and strategic plans to transition to an all-electric fleet by 2030.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A corporate social responsibility and environmental sustainability analysis of Bentley Motors. The report evaluates carbon-neutral production processes at the Crewe factory, sustainable materials engineering (e.g., vege-leather options), waste-to-resource initiatives, and strategic plans to transition to an all-electric fleet by 2030.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: PESTLE, ESG</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -543,11 +692,11 @@
                             <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Integrated Theatre Commands in India</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">An institutional critique of the transition to Integrated Theatre Commands (ITCs) within India's military framework. It explores operational bottlenecks, structural hierarchies, and inter-service coordination challenges.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">An institutional critique of the transition to Integrated Theatre Commands (ITCs) within India's military framework. It explores operational bottlenecks, structural hierarchies, and inter-service coordination challenges.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Policy Process</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -559,11 +708,11 @@
                             <span class="text-xs text-slate-500">APA 7th Edition</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">HS2 Euston Station Risk Assessment</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A project management risk analysis of the High Speed 2 (HS2) Euston Station terminal project. The study details cost overruns, timeline slippages, and complex stakeholder concerns. It features a complete risk register and mitigation matrix.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A project management risk analysis of the High Speed 2 (HS2) Euston Station terminal project. The study details cost overruns, timeline slippages, and complex stakeholder concerns. It features a complete risk register and mitigation matrix.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Risk Register</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -575,11 +724,11 @@
                             <span class="text-xs text-slate-500">OSCOLA Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Legal Case Study & ADR Proposal</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A three-fold legal assessment of a commercial contract dispute. It provides an in-depth Case Study Analysis, outlines a mediation/Alternative Dispute Resolution (ADR) proposal, and drafts a formal claim.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A three-fold legal assessment of a commercial contract dispute. It provides an in-depth Case Study Analysis, outlines a mediation/Alternative Dispute Resolution (ADR) proposal, and drafts a formal claim.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: IRAC Method</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -591,11 +740,11 @@
                             <span class="text-xs text-slate-500">APA 7th Edition</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">From Custody to Community: Punjab Parole</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A comparative system review analyzing the non-custodial rehabilitation framework in Punjab, Pakistan. It contrasts local parole outcomes and supervision laws against international best practices from the UK and USA.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A comparative system review analyzing the non-custodial rehabilitation framework in Punjab, Pakistan. It contrasts local parole outcomes and supervision laws against international best practices from the UK and USA.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Comparative Laws</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -607,11 +756,11 @@
                             <span class="text-xs text-slate-500">APA 7th Edition</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">AI-Driven Personalisation in Omnichannel Retail</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A quantitative thesis study examining how AI-driven product recommendations shape consumer satisfaction and brand loyalty across physical and online retail environments.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A quantitative thesis study examining how AI-driven product recommendations shape consumer satisfaction and brand loyalty across physical and online retail environments.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: SPSS Regression</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -623,11 +772,11 @@
                             <span class="text-xs text-slate-500">IEEE Formatting</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">LLM Security Risks & Mitigation Strategies</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A cybersecurity threat framework assessing structural vulnerabilities in enterprise LLM deployments, focused on prompt injections, data leaks, and poisoning mitigations.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A cybersecurity threat framework assessing structural vulnerabilities in enterprise LLM deployments, focused on prompt injections, data leaks, and poisoning mitigations.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: NIST AI RMF</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -639,11 +788,11 @@
                             <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">UK Housing Affordability Crisis</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A comprehensive socio-economic report analyzing the impacts of spatial planning, green belt policies, and interest rates on urban and rural housing availability across the UK.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A comprehensive socio-economic report analyzing the impacts of spatial planning, green belt policies, and interest rates on urban and rural housing availability across the UK.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Supply Elasticity</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -659,7 +808,7 @@
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: R2P Doctrine</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -668,14 +817,14 @@
                     <div class="p-6 cursor-pointer">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-[9px] uppercase tracking-wider font-semibold text-gold-700 dark:text-gold-400 bg-slate-100 dark:bg-slate-800/60 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700/50">Geopolitics</span>
-                            <span class="text-xs text-slate-505">Harvard Style</span>
+                            <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Beyond the Border: China-India Dispute</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A strategic assessment of LAC border clashes, militarization, and their multi-dimensional implications on regional and trade stability across South Asia.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A strategic assessment of LAC border clashes, militarization, and their multi-dimensional implications on regional and trade stability across South Asia.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Realist Threat</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -687,11 +836,11 @@
                             <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Role of Media in Policy and Politics</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A sociological evaluation tracking media influence on public perceptions, agenda-setting dynamics, and legislative outcomes in democratic systems.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A sociological evaluation tracking media influence on public perceptions, agenda-setting dynamics, and legislative outcomes in democratic systems.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Agenda Setting</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -703,11 +852,11 @@
                             <span class="text-xs text-slate-500">APA 7th Edition</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Why Gender Matters to Building Sustainable Peace</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">An academic analysis investigating post-conflict resolution durability, arguing that gender inclusion models produce lasting peace treaties.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">An academic analysis investigating post-conflict resolution durability, arguing that gender inclusion models produce lasting peace treaties.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Feminist Security</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -723,7 +872,7 @@
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Structural Realism</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -735,11 +884,11 @@
                             <span class="text-xs text-slate-500">Harvard Style</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Acquisition & Rebranding of an Existing Café</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A practical project management framework detailing rebranding tasks, critical paths, cashflow structures, marketing positioning, and launch schedules.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A practical project management framework detailing rebranding tasks, critical paths, cashflow structures, marketing positioning, and launch schedules.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Gantt, SWOT</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -751,11 +900,11 @@
                             <span class="text-xs text-slate-500">APA & Harvard</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Unilever strategic plan (Ghoshal Typology)</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">An assessment of Unilever's transnational strategy, evaluating balancing mechanisms for local responsiveness and global product standardization.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">An assessment of Unilever's transnational strategy, evaluating balancing mechanisms for local responsiveness and global product standardization.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: Bartlett Typology</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -764,14 +913,14 @@
                     <div class="p-6 cursor-pointer">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-[9px] uppercase tracking-wider font-semibold text-gold-700 dark:text-gold-400 bg-slate-100 dark:bg-slate-800/60 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700/50">Literature Review</span>
-                            <span class="text-xs text-slate-505">APA 7th Edition</span>
+                            <span class="text-xs text-slate-500">APA 7th Edition</span>
                         </div>
                         <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 hover:text-gold-600 dark:hover:text-gold-400 transition-colors">Technostress & Employee Burnout</h3>
-                        <p class="text-slate-505 dark:text-slate-400 text-xs font-light line-clamp-3">A systematic literature review evaluating technological stressors, digital fatigue, and workplace burnout in remote UK operations.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-light line-clamp-3">A systematic literature review evaluating technological stressors, digital fatigue, and workplace burnout in remote UK operations.</p>
                     </div>
                     <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex justify-between items-center text-[10px] text-slate-500">
                         <span>Framework: PRISMA Method</span>
-                        <span class="text-gold-600 dark:text-gold-505 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
+                        <span class="text-gold-600 dark:text-gold-500 font-medium hover:underline">View Abstract <i class="fa-solid fa-chevron-right ml-0.5 text-[8px]"></i></span>
                     </div>
                 </div>
 
@@ -817,8 +966,148 @@
         </div>
     </section>
 
+    <!-- ══ Skills Progress Bars ══ -->
+    <section id="skills" class="py-24 bg-slate-100 dark:bg-navy-900 border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-5">
+                <span class="text-xs font-bold tracking-widest text-gold-600 dark:text-gold-500 uppercase block">Skill Proficiency</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">Core Competency Levels</h2>
+                <p class="text-slate-500 dark:text-slate-400 font-light text-sm">Years of hands-on work across government administration, M.Phil research, and freelance academic consulting.</p>
+                <div class="space-y-5 pt-4" id="skills-list">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">APA / Harvard Referencing</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">97%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="97"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Literature Review &amp; Synthesis</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">92%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">SPSS &amp; Quantitative Analysis</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">85%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">PowerPoint &amp; Poster Design</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">90%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Policy &amp; Research Report Writing</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">95%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-1.5">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">OSCOLA &amp; Legal Citation</span>
+                            <span class="text-xs font-bold text-gold-600 dark:text-gold-500">88%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill h-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-full" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Quick facts -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="fade-in-up p-6 bg-white dark:bg-slate-950/60 rounded-2xl border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+                    <i class="fa-solid fa-file-lines text-3xl text-gold-600 dark:text-gold-500 mb-3"></i>
+                    <p class="text-2xl font-serif font-bold text-slate-900 dark:text-white">16+</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Major Reports</p>
+                </div>
+                <div class="fade-in-up p-6 bg-white dark:bg-slate-950/60 rounded-2xl border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+                    <i class="fa-solid fa-globe text-3xl text-gold-600 dark:text-gold-500 mb-3"></i>
+                    <p class="text-2xl font-serif font-bold text-slate-900 dark:text-white">5+</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Citation Styles</p>
+                </div>
+                <div class="fade-in-up p-6 bg-white dark:bg-slate-950/60 rounded-2xl border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+                    <i class="fa-solid fa-clock text-3xl text-gold-600 dark:text-gold-500 mb-3"></i>
+                    <p class="text-2xl font-serif font-bold text-slate-900 dark:text-white">24hr</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Response Time</p>
+                </div>
+                <div class="fade-in-up p-6 bg-white dark:bg-slate-950/60 rounded-2xl border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+                    <i class="fa-brands fa-fiverr text-3xl text-gold-600 dark:text-gold-500 mb-3"></i>
+                    <p class="text-2xl font-serif font-bold text-slate-900 dark:text-white">⭐ 5.0</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Fiverr Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ Testimonials ══ -->
+    <section id="testimonials" class="py-24 bg-white dark:bg-navy-950/50 border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-gold-600 dark:text-gold-500 uppercase block">Client Reviews</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">What Clients Say</h2>
+                <p class="text-slate-500 dark:text-slate-400 font-light">Feedback from students and professionals who trusted me with their academic work.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in-up bg-slate-50 dark:bg-slate-900/40 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative">
+                    <div class="text-gold-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm font-light leading-relaxed mb-6">&ldquo;Absolutely outstanding work! My Harvard-referenced dissertation was returned perfectly formatted, every source cross-checked. Highly professional and fast turnaround — will definitely order again!&rdquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center font-bold text-white text-sm">JM</div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900 dark:text-white">James M.</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">🇬🇧 United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in-up bg-slate-50 dark:bg-slate-900/40 p-8 rounded-2xl border border-gold-500/30 dark:border-gold-500/20 shadow-md relative" style="transition-delay:0.15s">
+                    <div class="absolute -top-3 left-6 bg-gold-600 text-white text-[9px] font-bold tracking-widest px-2 py-0.5 rounded-full uppercase">Top Review</div>
+                    <div class="text-gold-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm font-light leading-relaxed mb-6">&ldquo;I needed a complex SPSS analysis and a presentation for my MBA thesis. Atif delivered both with incredible precision — the slides looked incredibly professional. 10/10 recommend.&rdquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-700 flex items-center justify-center font-bold text-white text-sm">SA</div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900 dark:text-white">Sara A.</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">🇦🇪 UAE</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in-up bg-slate-50 dark:bg-slate-900/40 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative" style="transition-delay:0.3s">
+                    <div class="text-gold-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm font-light leading-relaxed mb-6">&ldquo;Got my APA 7th edition referencing fixed within 24 hours. Every in-text citation and the bibliography were spot on. The communication was excellent throughout. Truly a pro!&rdquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 flex items-center justify-center font-bold text-white text-sm">RK</div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900 dark:text-white">Ravi K.</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">🇮🇳 India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call To Action -->
-    <section class="bg-white dark:bg-navy-950 text-slate-800 dark:text-white py-20 relative overflow-hidden border-t border-slate-200 dark:border-slate-855 transition-colors duration-300">
+    <section class="bg-white dark:bg-navy-950 text-slate-800 dark:text-white py-20 relative overflow-hidden border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.05),transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.08),transparent_70%)] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center px-6 space-y-8 relative z-10">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">Need Premium Formatting or Detailed Research Briefs?</h2>
@@ -834,7 +1123,7 @@
                     <i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i>
                     <span>Connect on WhatsApp</span>
                 </a>
-                <a href="#contact" class="px-8 py-3.5 bg-transparent border border-gold-600 dark:border-gold-500 text-gold-700 dark:text-gold-505 hover:bg-gold-505 hover:text-navy-950 font-bold rounded-lg shadow-lg flex items-center justify-center space-x-2 transition-all duration-300">
+                <a href="#contact" class="px-8 py-3.5 bg-transparent border border-gold-600 dark:border-gold-500 text-gold-700 dark:text-gold-500 hover:bg-gold-500 hover:text-navy-950 font-bold rounded-lg shadow-lg flex items-center justify-center space-x-2 transition-all duration-300">
                     <i class="fa-regular fa-envelope"></i>
                     <span>Request Proposal</span>
                 </a>
@@ -860,7 +1149,7 @@
                             <i class="fa-regular fa-envelope text-lg"></i>
                         </div>
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-slate-505 font-semibold">Direct Email</span>
+                            <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Direct Email</span>
                             <a href="mailto:atif1256@gmail.com" class="text-slate-800 dark:text-white font-medium hover:text-gold-600 dark:hover:text-gold-400 transition text-sm">atif1256@gmail.com</a>
                         </div>
                     </div>
@@ -870,7 +1159,7 @@
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                         </div>
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-slate-505 font-semibold">Phone & WhatsApp</span>
+                            <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Phone & WhatsApp</span>
                             <a href="https://wa.me/923451579846" target="_blank" class="text-slate-800 dark:text-white font-medium hover:text-gold-600 dark:hover:text-gold-400 transition text-sm">+92 345 1579846</a>
                         </div>
                     </div>
@@ -880,7 +1169,7 @@
                             <i class="fa-brands fa-linkedin-in text-lg"></i>
                         </div>
                         <div>
-                            <span class="block text-[10px] uppercase tracking-wider text-slate-505 font-semibold">LinkedIn Profile</span>
+                            <span class="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold">LinkedIn Profile</span>
                             <a href="https://www.linkedin.com/in/matifali1996" target="_blank" class="text-slate-800 dark:text-white font-medium hover:text-gold-600 dark:hover:text-gold-400 transition text-sm">linkedin.com/in/matifali1996</a>
                         </div>
                     </div>
@@ -933,7 +1222,7 @@
                         <span>Submit Inquiry &amp; Request Proposal</span>
                     </button>
                 </form>
-            </div>>
+            </div>
         </div>
     </section>
 
@@ -946,7 +1235,7 @@
                 </div>
                 <div>
                     <span class="block text-sm font-bold text-slate-900 dark:text-white font-serif">Muhammad Atif Ali</span>
-                    <span class="block text-[9px] uppercase tracking-wider text-gold-600 dark:text-gold-505 font-medium">Academic & Policy Research Specialist</span>
+                    <span class="block text-[9px] uppercase tracking-wider text-gold-600 dark:text-gold-500 font-medium">Academic & Policy Research Specialist</span>
                 </div>
             </div>
             <p class="text-center md:text-right">&copy; 2026 Muhammad Atif Ali. All rights reserved. <br class="sm:hidden"> Designed for Elite Academic Consultations.</p>
@@ -962,7 +1251,7 @@
                     <span id="modal-category" class="text-[9px] uppercase tracking-wider font-semibold text-gold-700 dark:text-gold-400 bg-slate-100 dark:bg-slate-800/80 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700/50">Category</span>
                     <h3 id="modal-title" class="text-lg font-serif font-bold text-slate-900 dark:text-white mt-1.5">Project Title Placeholder</h3>
                 </div>
-                <button onclick="closeAbstractModal()" class="text-slate-400 hover:text-slate-655 dark:hover:text-white text-xl p-1 focus:outline-none" aria-label="Close Modal">
+                <button onclick="closeAbstractModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-xl p-1 focus:outline-none" aria-label="Close Modal">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -979,15 +1268,15 @@
                         <p id="modal-methodology" class="text-slate-500 dark:text-slate-400 text-xs font-light">Methodologies go here.</p>
                     </div>
                     <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-505 font-semibold mb-1.5">Compliance & Citation</h4>
-                        <p id="modal-citation" class="text-slate-505 dark:text-slate-400 text-xs font-light">Citation details go here.</p>
+                        <h4 class="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500 font-semibold mb-1.5">Compliance & Citation</h4>
+                        <p id="modal-citation" class="text-slate-500 dark:text-slate-400 text-xs font-light">Citation details go here.</p>
                     </div>
                 </div>
             </div>
             <!-- Modal Footer -->
             <div class="px-6 py-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <span class="text-[10px] text-slate-500"><i class="fa-solid fa-shield-halved text-gold-600 dark:text-gold-500/60 mr-1"></i> Private academic assignment archive.</span>
-                <a href="#contact" onclick="closeAbstractModal()" class="w-full sm:w-auto px-6 py-2 bg-transparent border border-gold-600 dark:border-gold-505 hover:bg-gold-505 hover:text-navy-950 text-gold-700 dark:text-gold-500 text-xs font-semibold rounded-lg text-center transition">Inquire About Similar Project</a>
+                <a href="#contact" onclick="closeAbstractModal()" class="w-full sm:w-auto px-6 py-2 bg-transparent border border-gold-600 dark:border-gold-500 hover:bg-gold-500 hover:text-navy-950 text-gold-700 dark:text-gold-500 text-xs font-semibold rounded-lg text-center transition">Inquire About Similar Project</a>
             </div>
         </div>
     </div>
@@ -1035,6 +1324,146 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Hero typing effect
+        const typingText = document.getElementById('typing-text');
+        const typingPhrases = [
+            'Policy Research & Analytical Reports...',
+            'Governance & Security Analysis...',
+            'Academic Consultancy...',
+            'APA/Harvard Formatting...',
+            'SPSS & Data Evaluation...',
+            'Policy Briefs & Executive Summaries...'
+        ];
+
+        if (typingText) {
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function updateTypingText() {
+                const currentPhrase = typingPhrases[phraseIndex];
+                typingText.textContent = currentPhrase.slice(0, charIndex);
+
+                if (!isDeleting && charIndex < currentPhrase.length) {
+                    charIndex += 1;
+                    setTimeout(updateTypingText, 60);
+                    return;
+                }
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(updateTypingText, 1300);
+                    return;
+                }
+
+                if (isDeleting && charIndex > 0) {
+                    charIndex -= 1;
+                    setTimeout(updateTypingText, 35);
+                    return;
+                }
+
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+                setTimeout(updateTypingText, 250);
+            }
+
+            updateTypingText();
+        }
+
+        // Scroll reveals, skill bars, and count-up stats
+        const revealSelectors = [
+            '#gig-showcase .lg\\:col-span-4',
+            '#gig-showcase .lg\\:col-span-8',
+            '#about .lg\\:col-span-6',
+            '#services .grid > div',
+            '#pricing .grid > div',
+            '.portfolio-item',
+            '#skills .skill-item',
+            '#contact .lg\\:col-span-5',
+            '#contact .lg\\:col-span-7'
+        ];
+
+        document.querySelectorAll(revealSelectors.join(',')).forEach((element, index) => {
+            element.classList.add('fade-in-up');
+            if (!element.style.transitionDelay) {
+                element.style.transitionDelay = `${Math.min(index % 4, 3) * 0.06}s`;
+            }
+        });
+
+        function fillSkillBar(bar) {
+            const width = Math.max(0, Math.min(Number(bar.dataset.width || 0), 100));
+            bar.style.width = `${width}%`;
+        }
+
+        function renderCounterValue(counter, target) {
+            const decimals = Number(counter.dataset.decimals || 0);
+            const suffix = counter.dataset.suffix || '';
+            counter.textContent = `${target.toFixed(decimals)}${suffix}`;
+        }
+
+        function animateCounter(counter) {
+            if (counter.dataset.animated === 'true') return;
+            counter.dataset.animated = 'true';
+
+            const target = Number(counter.dataset.target || 0);
+            const duration = 1100;
+            const startTime = performance.now();
+
+            function updateCounter(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                renderCounterValue(counter, target * easedProgress);
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    renderCounterValue(counter, target);
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+        }
+
+        const animatedElements = [
+            ...document.querySelectorAll('.fade-in-up'),
+            ...document.querySelectorAll('.skill-bar-fill'),
+            ...document.querySelectorAll('.counter')
+        ];
+
+        function revealElement(element) {
+            if (element.classList.contains('fade-in-up')) {
+                element.classList.add('visible');
+            }
+
+            if (element.classList.contains('skill-bar-fill')) {
+                fillSkillBar(element);
+            }
+
+            if (element.classList.contains('counter')) {
+                animateCounter(element);
+            }
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+            animatedElements.forEach(revealElement);
+        } else {
+            const animationObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealElement(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.18,
+                rootMargin: '0px 0px -70px 0px'
+            });
+
+            animatedElements.forEach(element => animationObserver.observe(element));
+        }
 
         // Portfolio Filtering logic
         const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
@@ -1259,5 +1688,11 @@
             }, 400);
         }
     </script>
+    <!-- ══ Floating WhatsApp Button ══ -->
+    <a href="https://wa.me/923451579846" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <span class="wa-tooltip">Chat on WhatsApp</span>
+        <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+    </a>
+
 </body>
 </html>
