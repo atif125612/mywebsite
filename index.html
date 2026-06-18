@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Atif Ali | Policy Research & Criminal Justice Consultant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display (Headers) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B132B',
+                            900: '#070A13',
+                            DEFAULT: '#111827'
+                        },
+                        gold: {
+                            100: '#F4EAD4',
+                            500: '#C5A059',
+                            600: '#B08C46',
+                            700: '#967433'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Extra custom styling for exact high-end agency look */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E6D2AA 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #070A13;
+            background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 leading-relaxed">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-navy-900/95 backdrop-blur-md text-white border-b border-white/5 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center font-serif text-xl font-bold text-navy-900 shadow-lg">
+                    MA
+                </div>
+                <div>
+                    <span class="block text-lg font-serif font-bold tracking-wide text-white">M. Atif Ali</span>
+                    <span class="block text-[10px] tracking-widest text-gold-500 uppercase font-semibold">Policy & Research Specialist</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#hero" class="text-slate-300 hover:text-gold-500 transition-colors">Home</a>
+                <a href="#about" class="text-slate-300 hover:text-gold-500 transition-colors">About</a>
+                <a href="#services" class="text-slate-300 hover:text-gold-500 transition-colors">Services</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-gold-500 transition-colors">Portfolio</a>
+                <a href="#contact" class="px-5 py-2.5 bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold rounded shadow-md transition-all duration-300 hover:-translate-y-0.5">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none text-gold-500" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-t border-white/10 px-6 py-4 space-y-4">
+            <a href="#hero" class="block text-slate-300 hover:text-gold-500 text-base font-medium py-1">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-gold-500 text-base font-medium py-1">About</a>
+            <a href="#services" class="block text-slate-300 hover:text-gold-500 text-base font-medium py-1">Services</a>
+            <a href="#portfolio" class="block text-slate-300 hover:text-gold-500 text-base font-medium py-1">Portfolio</a>
+            <a href="#contact" class="block text-center bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold py-2.5 rounded transition-all">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-pattern min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden text-white">
+        <!-- Decorative golden ambient glow -->
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Hero Content -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-500 text-xs font-semibold tracking-wider uppercase">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    <span>Available for Global Consultancies</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+                    Policy Research and <br class="hidden md:block">
+                    <span class="gold-gradient-text">Analytical Reports</span> for Decision Makers
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-xl font-light">
+                    I transform complex policy, criminal justice, and security challenges into clear, evidence-based, and decision-ready analytical reports.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="px-8 py-4 bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold text-center rounded shadow-lg shadow-gold-500/10 transition-all duration-300 hover:-translate-y-0.5">
+                        Our Expertise
+                    </a>
+                    <a href="#portfolio" class="px-8 py-4 bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-gold-500 font-bold text-center rounded transition-all duration-300">
+                        View Sample Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image / Visual Representation -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-[380px] group">
+                    <!-- Elegant visual frame backings -->
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-gold-500 to-gold-700 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-navy-800 p-3 rounded-2xl border border-white/15">
+                        <!-- Replace "Profile_pic.png" with your actual image file on your server -->
+                        <img src="Profile_pic.png" alt="Muhammad Atif Ali" class="w-full h-auto rounded-xl object-cover shadow-2xl filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute bottom-6 left-6 right-6 bg-navy-900/90 backdrop-blur border border-white/10 p-4 rounded-lg">
+                            <h3 class="text-base font-serif font-bold text-white">Muhammad Atif Ali</h3>
+                            <p class="text-xs text-gold-500 font-medium tracking-wide mt-1">In-charge PPDU | M.Phil Sociology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="bg-navy-900 py-8 border-y border-white/5 text-slate-300 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="flex items-center justify-center space-x-3 py-2 border-r border-white/10 last:border-none">
+                <i class="fa-solid fa-scale-balanced text-gold-500 text-lg"></i>
+                <span class="font-medium tracking-wide text-xs lg:text-sm">Public Policy Analysis</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3 py-2 border-r border-white/10 last:border-none">
+                <i class="fa-solid fa-gavel text-gold-500 text-lg"></i>
+                <span class="font-medium tracking-wide text-xs lg:text-sm">Criminal Justice Research</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3 py-2 border-r border-white/10 last:border-none">
+                <i class="fa-solid fa-shield-halved text-gold-500 text-lg"></i>
+                <span class="font-medium tracking-wide text-xs lg:text-sm">Governance & Security Reports</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3 py-2 last:border-none">
+                <i class="fa-solid fa-graduation-cap text-gold-500 text-lg"></i>
+                <span class="font-medium tracking-wide text-xs lg:text-sm">Academic Formatting Expert</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-bold tracking-widest text-gold-600 uppercase block">Expertise & Background</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy">Bridging Academic Rigor with Real-World Governance</h2>
+                <p class="text-slate-600 font-light">
+                    As an active Probation and Parole Officer and In-charge PPDU in the Home Department, I manage frontline offender supervision, operational compliance, and high-level structural data reporting.
+                </p>
+                <p class="text-slate-600 font-light">
+                    Combining this practical legal framework experience with a deep academic foundation (M.Phil in Sociology from the University of the Punjab), I specialize in translating complex socio-legal realities and data into professional, clear, decision-ready briefs.
+                </p>
+                <div class="pt-4 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="block text-3xl font-serif font-bold text-gold-600">3.5+</span>
+                        <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Years Gov Experience</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-serif font-bold text-gold-600">12+</span>
+                        <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Major Publications/Briefs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual bullet cards -->
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Card 1 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-3 bg-white text-gold-600 rounded-lg shadow-sm border border-slate-100">
+                        <i class="fa-solid fa-building-columns text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-navy mb-1">M.Phil Sociology Foundation</h3>
+                        <p class="text-slate-500 text-sm font-light">Equipped with sophisticated qualitative and quantitative research methodologies (SPSS, thematic coding), facilitating elite-level empirical investigation.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-3 bg-white text-gold-600 rounded-lg shadow-sm border border-slate-100">
+                        <i class="fa-solid fa-diagram-project text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-navy mb-1">PPDU Digital Monitoring & Compliance</h3>
+                        <p class="text-slate-500 text-sm font-light">Experienced in leading and managing modern system databases (OMIS, PMS, AMS) to transform institutional data sets into actionable policy reforms.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-3 bg-white text-gold-600 rounded-lg shadow-sm border border-slate-100">
+                        <i class="fa-solid fa-keyboard text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-navy mb-1">Elite Standardized Formatting</h3>
+                        <p class="text-slate-500 text-sm font-light">Expert execution of professional and academic layout structures, including strict APA, Harvard, Chicago, Footnotes, and detailed bibliographies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-gold-600 uppercase block">Expert Services</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy">Three Core Consulting Pillars</h2>
+                <p class="text-slate-500 font-light">Professional grade outputs tailored explicitly to public sectors, non-profits, legal divisions, and high-value research clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-gold-100/50 text-gold-600 rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-navy mb-4">1. Policy Research Reports</h3>
+                        <p class="text-slate-500 text-sm font-light mb-6">Evidence-based studies to structure governance programs and critical policy outcomes.</p>
+                        <ul class="space-y-2.5 text-xs text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Governance System Analysis</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Socio-Economic Impact Evaluation</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>International Geopolitical Briefs</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-gold-100/50 text-gold-600 rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-navy mb-4">2. Criminal Justice Reports</h3>
+                        <p class="text-slate-500 text-sm font-light mb-6">Leveraging deep operational intelligence from the Home Department framework.</p>
+                        <ul class="space-y-2.5 text-xs text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Probation & Parole Systems Analysis</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Pre-Sentence Investigations</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Offender Rehabilitation Programs</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-gold-100/50 text-gold-600 rounded-lg flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-pen-fancy"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-navy mb-4">3. Academic & Formatting</h3>
+                        <p class="text-slate-500 text-sm font-light mb-6">High-grade academic drafting, review, structured formatting, and professional presentations.</p>
+                        <ul class="space-y-2.5 text-xs text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>Comprehensive Literature Reviews</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>APA, Chicago, Footnotes, Harvard Formatting</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-600"></i> <span>High-End PPT & Poster Designs</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div class="space-y-4 max-w-xl">
+                    <span class="text-xs font-bold tracking-widest text-gold-600 uppercase block">Selected Portfolio</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy">High-Level Policy Briefs & Analyses</h2>
+                    <p class="text-slate-500 font-light text-sm">Review a selection of specialized research documents demonstrating a capacity to explore and translate multifaceted, critical international and domestic subject matter.</p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2 text-xs font-medium tracking-wide">
+                    <button class="portfolio-filter-btn px-4 py-2 bg-navy-900 text-gold-500 rounded font-semibold transition" data-filter="all">All Projects</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded font-semibold transition" data-filter="policy">Policy & IR</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded font-semibold transition" data-filter="justice">Criminal Justice</button>
+                    <button class="portfolio-filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded font-semibold transition" data-filter="sociology">Tech & Sociology</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="policy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">International Security</span>
+                            <span class="text-xs text-slate-400">Analysis Brief</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">Beyond the Border: The China-India Dispute</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">In-depth strategic investigation into border clashes, regional security, and the future balance of power across South Asia.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Geopolitical Strategy</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Security Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="policy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">Socio-Economic Policy</span>
+                            <span class="text-xs text-slate-400">Case Study</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">UK Housing Affordability Crisis</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">Analytical review of the housing scarcity, evaluating spatial, demographic, and macroeconomic impacts on urban/rural UK households.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Public Policy</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Socio-Economics</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="sociology">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">AI & Tech Governance</span>
+                            <span class="text-xs text-slate-400">Security Framework</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">AI Governance & Security Risks in LLMs</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">A complete conceptual risk-framework focused on deployment hazards, jailbreaking vulnerabilities, and corporate mitigation rules.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">AI Safety</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Risk Assessment</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="justice">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">Criminology</span>
+                            <span class="text-xs text-slate-400">Department Evaluation</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">Custody to Community: Probation System Evaluation</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">A benchmarking analysis comparing rehabilitation frameworks in Punjab against contemporary, proven international models.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Criminology</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Systemic Reform</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="policy">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">International Law</span>
+                            <span class="text-xs text-slate-400">Legal Review</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">Effectiveness of the Genocide Convention (1948)</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">A deep critique analyzing post-WWII compliance alongside the legal mechanics of the 'Responsibility to Protect' (R2P) doctrine.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">International Law</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">R2P Doctrine</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm flex flex-col justify-between" data-category="sociology">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-semibold text-gold-600">M.Phil Thesis</span>
+                            <span class="text-xs text-slate-400">Academic Thesis</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2 hover:text-gold-600 transition">Factors Behind Child Beggary in Lahore</h3>
+                        <p class="text-slate-500 text-xs font-light mb-4">Thematic, qualitative in-depth structural research into socio-economic dynamics and institutional gaps preventing child exploitation.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-slate-100 bg-slate-100/50 flex flex-wrap gap-1.5">
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Qualitative Methodology</span>
+                        <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">Thematic Analysis</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="bg-navy-900 text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.12),transparent_70%)] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center px-6 space-y-8 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold">Ready to Elevate Your Institutional Intelligence?</h2>
+            <p class="text-slate-300 text-base md:text-lg max-w-xl mx-auto font-light">
+                Secure executive-level, clear, and action-ready reporting for public, non-profit, or legal sectors. I respond to all client queries within 24 hours.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/923451579846" target="_blank" class="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg shadow-lg flex items-center justify-center space-x-2 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Connect via WhatsApp</span>
+                </a>
+                <a href="#contact" class="px-8 py-3.5 bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold rounded-lg shadow-lg flex items-center justify-center space-x-2 transition-all duration-300">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Request Custom Proposal</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- Contact details -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="space-y-4">
+                    <span class="text-xs font-bold tracking-widest text-gold-600 uppercase block">Contact & Inquiries</span>
+                    <h2 class="text-3xl font-serif font-bold text-navy">Let's Discuss Your Project</h2>
+                    <p class="text-slate-500 font-light text-sm">Whether you represent an NGO, government agency, academic research group, or high-end consult agency, I am available to support your operational goals.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Detail 1 -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-gold-600 shadow-sm border border-slate-100">
+                            <i class="fa-regular fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold">Direct Email</span>
+                            <a href="mailto:atif1256@gmail.com" class="text-navy font-medium hover:text-gold-600 transition text-sm">atif1256@gmail.com</a>
+                        </div>
+                    </div>
+                    <!-- Detail 2 -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-gold-600 shadow-sm border border-slate-100">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold">Phone & WhatsApp</span>
+                            <a href="https://wa.me/923451579846" target="_blank" class="text-navy font-medium hover:text-gold-600 transition text-sm">+92 345 1579846</a>
+                        </div>
+                    </div>
+                    <!-- Detail 3 -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-gold-600 shadow-sm border border-slate-100">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold">Professional Profile</span>
+                            <a href="https://www.linkedin.com/in/matifali1996" target="_blank" class="text-navy font-medium hover:text-gold-600 transition text-sm">linkedin.com/in/matifali1996</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-gold-100/50 border border-gold-500/20 rounded-lg text-xs text-navy/80 flex items-start space-x-3">
+                    <i class="fa-solid fa-clock text-gold-600 mt-0.5"></i>
+                    <span><strong>Response Guarantee:</strong> I monitor incoming proposals constantly and will reply within 24 hours with a comprehensive layout strategy.</span>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7 bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm">
+                <!-- Feel free to hook this form up to Formspree, Netlify Forms, or Web3Forms -->
+                <form action="https://formspree.io/f/your_form_id_here" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-xs font-bold tracking-wide text-slate-600 uppercase mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold-500 focus:border-gold-500 transition text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-bold tracking-wide text-slate-600 uppercase mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold-500 focus:border-gold-500 transition text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-xs font-bold tracking-wide text-slate-600 uppercase mb-2">Subject Requirement</label>
+                        <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold-500 focus:border-gold-500 transition text-sm">
+                            <option value="policy">Policy Analysis / Governance Brief</option>
+                            <option value="criminal_justice">Criminal Justice / Criminology Report</option>
+                            <option value="academic">Academic Consulting & Editing</option>
+                            <option value="formatting">APA/Harvard Citation Support</option>
+                            <option value="other">Other Collaboration</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-bold tracking-wide text-slate-600 uppercase mb-2">Brief Project Overview</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your data sets, objectives, or formatting requirements..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold-500 focus:border-gold-500 transition text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold rounded-lg transition-colors shadow-md">
+                        Submit Inquiries & Request Proposal
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white/50 py-12 border-t border-white/5 text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded bg-gold-500 flex items-center justify-center font-serif text-base font-bold text-navy-900">
+                    MA
+                </div>
+                <div>
+                    <span class="block text-sm font-bold text-white font-serif">Muhammad Atif Ali</span>
+                    <span class="block text-[9px] uppercase tracking-wider text-gold-500 font-medium">Policy & Research Specialist</span>
+                </div>
+            </div>
+            <p class="text-center md:text-right">&copy; 2026 Muhammad Atif Ali. All rights reserved. <br class="sm:hidden"> Designed for Elite Institutional Consulting.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic for Mobile Menu and Dynamic Portfolio Filtering -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Filtering logic
+        const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state style
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-navy-900', 'text-gold-500');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.add('bg-navy-900', 'text-gold-500');
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+                const selectedFilter = btn.getAttribute('data-filter');
+
+                // Toggle visibility
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (selectedFilter === 'all' || category === selectedFilter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
